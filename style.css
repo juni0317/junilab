@@ -1,0 +1,92 @@
+body {
+	background: #000;
+    color: white;
+    text-align: center;
+}
+
+a{
+    font-size: 30px;
+    color: white;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60vh;
+}
+
+.nucleus {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #F00;
+	position: absolute;
+	top: calc(50% - 25px);
+	left: calc(50% - 25px);
+	z-index: 2;
+}
+
+.orbit {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 2px solid #FFF;
+	position: absolute;
+	top: calc(50% - 100px);
+	left: calc(50% - 100px);
+	animation: orbit 5s linear infinite;
+}
+
+.orbit1 {
+	animation-duration: 5s;
+}
+
+.orbit2 {
+	animation-duration: 8s;
+}
+
+.orbit3 {
+	animation-duration: 10s;
+}
+
+.electron {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #0FF;
+	position: absolute;
+	top: calc(50% - 10px);
+	left: calc(50% - 10px);
+	animation: electron 5s linear infinite;
+}
+
+.electron1 {
+	animation-duration: 5s;
+}
+
+.electron2 {
+	animation-duration: 8s;
+}
+
+.electron3 {
+	animation-duration: 10s;
+}
+
+@keyframes orbit {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes electron {
+	from {
+		transform: rotate(0deg) translateX(100px) rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg) translateX(100px) rotate(-360deg);
+	}
+}
