@@ -29,6 +29,7 @@ a:hover{
 	top: calc(50% - 25px);
 	left: calc(50% - 25px);
 	z-index: 2;
+	scale: 2;
 }
 
 .nucleus.active .menu {
@@ -49,7 +50,7 @@ a:hover{
 	top: 50%;
 	left: 50%;
 	width: 500px;
-	height: 200px;
+	height: 300px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -78,6 +79,7 @@ a:hover{
 	top: calc(50% - 100px);
 	left: calc(50% - 100px);
 	animation: orbit 5s linear infinite;
+	scale: 2;
 }
 
 .orbit1 {
