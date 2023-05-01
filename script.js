@@ -16,3 +16,9 @@ function animateElectrons() {
 }
 
 animateElectrons();
+nucleus.addEventListener('mouseover', () => {
+  nucleus.classList.add('active');
+});
+nucleus.addEventListener('mouseout', () => {
+  nucleus.classList.remove('active');
+});

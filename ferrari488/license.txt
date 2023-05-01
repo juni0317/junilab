@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ferrari 488 GTB
+* source:	https://sketchfab.com/3d-models/ferrari-488-gtb-bdbb23e7a7c74f1984e5269b24bc8188
+* author:	Gatti Mattia (https://sketchfab.com/gatti.mattia)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ferrari 488 GTB" (https://sketchfab.com/3d-models/ferrari-488-gtb-bdbb23e7a7c74f1984e5269b24bc8188) by Gatti Mattia (https://sketchfab.com/gatti.mattia) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
