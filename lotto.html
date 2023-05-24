@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 당첨을 기원합니다.</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .lottery-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .number {
+    width: 50px;
+    height: 50px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #665aff, #6196ff);
+    transition: background 2s;
+  }
+  
+  .lottery-numbers:hover .number {
+    background: linear-gradient(135deg, #6196ff, #665aff);
+  }
+</style>
+</head>
+<body>
+  <div id="lotteryNumbers" class="lottery-numbers"></div>
+  
+  <script>
+    function generateLottoNumbers() {
+      const lottoNumbers = [];
+      while (lottoNumbers.length < 6) {
+        const randomNumber = Math.floor(Math.random() * 45) + 1;
+        if (!lottoNumbers.includes(randomNumber)) {
+          lottoNumbers.push(randomNumber);
+        }
+      }
+      return lottoNumbers.sort((a, b) => a - b);
+    }
+    
+    function displayLottoNumbers(lottoNumbers) {
+      const lotteryNumbersContainer = document.getElementById('lotteryNumbers');
+      lotteryNumbersContainer.innerHTML = '';
+      lottoNumbers.forEach((number) => {
+        const div = document.createElement('div');
+        div.className = 'number';
+        div.textContent = number;
+        lotteryNumbersContainer.appendChild(div);
+      });
+    }
+    
+    document.getElementById('lotteryNumbers').addEventListener('click', () => {
+      const newLottoNumbers = generateLottoNumbers();
+      displayLottoNumbers(newLottoNumbers);
+    });
+    
+    const initialLottoNumbers = generateLottoNumbers();
+    displayLottoNumbers(initialLottoNumbers);
+  </script>
+</body>
+</html>
