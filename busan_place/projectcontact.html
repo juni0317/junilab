@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부산 명소 검색</title>
+  <link rel="stylesheet" type="text/css" href="project.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6f16d718f780340811b9219d86b8585f&libraries=services"></script>
+  <script src="project.js"></script>
+</head>
+
+<body>
+
+  <div class="intro_bg">
+    <header>
+      <div class="searchArea">
+        <form onsubmit="searchAttraction(event)">
+          <input type="text" id="attraction-input" placeholder="명소 이름 입력(ex. 죽성성당)" required>
+          <span>검색</span>
+        </form>
+      </div>
+      <nav>
+        <ul class="menubar">
+          <li><a href="projectHome.html">HOME</a></li>
+          <li><a href="projectAbout.html">ABOUT</a></li>
+          <li><a href="projectcontact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="intro_text">
+      <h1>부산 명소 찾기</h1>
+      <h4 class="contents1">부산의 추천 명소 확인과 명소 이름 검색이 가능합니다</h4>
+    </div>
+  </div>
+  </div>
+  <!-- intro end-->
+  <ul class="weather">
+    <li>
+      <div>
+        <div class="contents1">현재 기온</div>
+        <div class="result"><span id="temperature"></span></div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="contents1">현재 습도</div>
+        <div class="result"><span id="humidity"></span></div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="contents1">현재 날씨</div>
+        <div class="result"><span id="condition"></span></div>
+      </div>
+    </li>
+  </ul>
+  <!-- weather end -->
+
+  <div id="attraction-details">
+    <div class="main_text2">
+      <h1>CONTACT</h1>
+      <div class="contents1">문의사항이 있으신 경우 아래의 연락처 정보를 참고하여 저희와 연락해주시기 바랍니다<br><br></div>
+      <div class="contact">
+        <div class="contents2">
+          학번 및 이름: 202170116 윤민석, 202155656 정혁준<br><br>
+          이메일: contact@busan.ac.kr<br><br>
+          전화번호: 051-512-xxxx<br><br>
+          주소: 부산시 금정구 부산대학로 63번길 2, 120층<br><br>
+          저희 팀은 월요일부터 금요일까지 9시부터 5시까지 근무합니다.<br>
+          보내주신 문의에 최대한 신속하게 응답하기 위해 노력하겠습니다.<br>
+          감사합니다. 여러분의 관심과 문의를 기다리고 있습니다!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <table style="margin-left: auto; margin-right: auto;">
+      <tbody>
+        <tr>
+          <td><img src="https://blog.kakaocdn.net/dn/bVDUi3/btrpozcmjEv/MmVG7njKeJbD9AR1ItXNz1/img.png" width="80"
+              height="80"></td>
+          <td>Pusan National University<br>
+            Addr. 부산광역시 금정구 부산대학로 63번길 2<br>
+            Tel. 051-512-xxxx</td>
+        </tr>
+      </tbody>
+    </table>
+  </footer>
+
+</body>
+
+</html>

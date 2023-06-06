@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부산 명소 검색</title>
+  <link rel="stylesheet" type="text/css" href="project.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6f16d718f780340811b9219d86b8585f&libraries=services"></script>
+  <script src="project.js"></script>
+</head>
+
+<body>
+
+  <div class="intro_bg">
+    <header>
+      <div class="searchArea">
+        <form onsubmit="searchAttraction(event)">
+          <input type="text" id="attraction-input" placeholder="명소 이름 입력(ex. 죽성성당)" required>
+          <span>검색</span>
+        </form>
+      </div>
+      <nav>
+        <ul class="menubar">
+          <li><a href="projectHome.html">HOME</a></li>
+          <li><a href="projectAbout.html">ABOUT</a></li>
+          <li><a href="projectcontact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="intro_text">
+      <h1>부산 명소 찾기</h1>
+      <h4 class="contents1">부산의 추천 명소 확인과 명소 이름 검색이 가능합니다</h4>
+    </div>
+  </div>
+  </div>
+
+  <!-- intro end-->
+
+  <ul class="weather">
+    <li>
+      <div>
+        <div class="contents1">현재 기온</div>
+        <div class="result"><span id="temperature"></span></div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="contents1">현재 습도</div>
+        <div class="result"><span id="humidity"></span></div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="contents1">현재 날씨</div>
+        <div class="result"><span id="condition"></span></div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- weather end -->
+
+  <div id="attraction-details">
+    <div class="recommended_spots">
+      <h1>추천 명소</h1>
+      <div class="contents1">현지인이 추천하는 부산 5대 명소</div>
+
+      <ul class="icons">
+        <li class="icon_0">
+          <div class="contents1_bold"><br><br><br><br>해운대 해수욕장</div>
+          <div class="contents2">
+            부산광역시 해운대구 해운대해변로 280
+          </div>
+          <button class="mapButton" onclick="showMap('부산광역시 해운대구 해운대해변로 280')">지도 보기</button>
+        </li>
+
+        <li class="icon_1">
+          <div class="contents1_bold"><br><br><br><br>광안리 해수욕장</div>
+          <div class="contents2">
+            부산 수영구 광안해변로 219
+          </div>
+          <button class="mapButton" onclick="showMap('부산 수영구 광안해변로 219')">지도 보기</button>
+        </li>
+
+        <li class="icon_2">
+          <div class="contents1_bold"><br><br><br><br>감천문화마을</div>
+          <div class="contents2">
+            부산 사하구 감내2로 203
+          </div>
+          <button class="mapButton" onclick="showMap('부산 사하구 감내2로 203')">지도 보기</button>
+        </li>
+
+        <li class="icon_3">
+          <div class="contents1_bold"><br><br><br><br>태종대</div>
+          <div class="contents2">
+            부산 영도구 전망로 24
+          </div>
+          <button class="mapButton" onclick="showMap('부산 영도구 전망로 24')">지도 보기</button>
+        </li>
+
+        <li class="icon_4">
+          <div class="contents1_bold"><br><br><br><br>자갈치 시장</div>
+          <div class="contents2">
+            부산 중구 자갈치해안로 52
+          </div>
+          <button class="mapButton" onclick="showMap('부산 중구 자갈치해안로 52')">지도 보기</button>
+        </li>
+      </ul>
+    </div>
+
+    <span id="mapArea"></span>
+  </div>
+
+  <!-- map end -->
+
+  <footer>
+    <table style="margin-left: auto; margin-right: auto;">
+      <tbody>
+        <tr>
+          <td><img src="https://blog.kakaocdn.net/dn/bVDUi3/btrpozcmjEv/MmVG7njKeJbD9AR1ItXNz1/img.png" width="80"
+              height="80"></td>
+          <td>Pusan National University<br>
+            Addr. 부산광역시 금정구 부산대학로 63번길 2<br>
+            Tel. 051-512-0311</td>
+        </tr>
+      </tbody>
+    </table>
+  </footer>
+
+</body>
+
+</html>

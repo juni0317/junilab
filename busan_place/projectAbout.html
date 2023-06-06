@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부산 명소 검색</title>
+  <link rel="stylesheet" type="text/css" href="project.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6f16d718f780340811b9219d86b8585f&libraries=services"></script>
+  <script src="project.js"></script>
+</head>
+
+<body>
+  <div class="intro_bg">
+    <header>
+      <div class="searchArea">
+        <form onsubmit="searchAttraction(event)">
+          <input type="text" id="attraction-input" placeholder="명소 이름 입력(ex. 죽성성당)" required>
+          <span>검색</span>
+        </form>
+      </div>
+      <nav>
+        <ul class="menubar">
+          <li><a href="projectHome.html">HOME</a></li>
+          <li><a href="projectAbout.html">ABOUT</a></li>
+          <li><a href="projectcontact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="intro_text">
+      <h1>부산 명소 찾기</h1>
+      <h4 class="contents1">부산의 추천 명소 확인과 명소 이름 검색이 가능합니다</h4>
+    </div>
+  </div>
+  </div>
+  <!-- intro end-->
+  <ul class="weather">
+    <li>
+      <div>
+        <div class="contents1">현재 기온</div>
+        <div class="result"><span id="temperature"></span></div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="contents1">현재 습도</div>
+        <div class="result"><span id="humidity"></span></div>
+      </div>
+    </li>
+    <li>
+      <div>
+        <div class="contents1">현재 날씨</div>
+        <div class="result"><span id="condition"></span></div>
+      </div>
+    </li>
+  </ul>
+  <!-- weather end -->
+
+  <div id="attraction-details">
+    <div class="main_text1">
+      <h1>ABOUT</h1>
+      <div class="contents1">부산 여행을 즐기기 위한 정보와 명소 검색 기능을 제공합니다</div>
+      <div class="about">
+        <div class="contents2">
+          <h2>'Busan is good'</h2>
+          <p>
+            안녕하세요! 부산 명소 추천 및 검색 사이트에 오신 것을 환영합니다. 저희 사이트는 부산의 아름다움과 매력을 여러분께 소개하고, 부산 여행을 더욱 특별하게 만들어드리기 위해
+            제작되었습니다.<br><br>
+            부산은 그 독특한 자연과 역사, 문화적인 풍경으로 유명한 대한민국의 도시입니다. 이곳에서는 푸른 바다와 화려한 일몰을 감상할 수 있는 아름다운 해변, 역사적인 유산과 유명한 절, 전통 시장과
+            현대적인 쇼핑몰, 다양한 축제와 문화 행사 등 다채로운 경험을 제공합니다.<br><br>
+            우리 사이트는 여러분이 부산에서의 여행을 계획하고 즐기는 데 도움을 주기 위해 설계되었습니다. 부산의 현재 기온과 날씨를 알 수 있으며, 현지인이 추천하는 부산 5대 명소의 지도를 볼 수
+            있습니다. 또한, 부산의 주요 명소들을 쉽게 찾아볼 수 있는 명소 검색 기능을 통해 명소의 세부 정보와 사진을 확인할 수 있습니다. 이를 통해 여러분은 관심 있는 장소를 더욱 쉽게 찾을 수
+            있고, 부산 여행에 대한 기대를 높일 수 있습니다.<br><br>
+            저희 팀은 부산에 대한 관심과 열정을 가진 개발자들로 구성되어 있습니다. 우리는 사용자들의 편의와 만족도를 최우선으로 생각하며, 지속적인 개선을 위해 노력하고 있습니다. 여러분의 의견과 피드백을
+            환영하며, 사용자 경험을 개선하기 위해 지속적으로 사이트를 발전시킬 것을 약속드립니다.<br><br>
+            부산 명소 추천 및 검색 사이트를 통해 여러분은 부산의 아름다움과 다양성을 발견할 수 있습니다. 저희는 여러분이 부산에서 특별하고 잊지 못할 경험을 만들 수 있도록 최선을
+            다하겠습니다.<br><br>
+            문의사항이나 도움이 필요하신 경우, 언제든지 저희와 연락 주시기 바랍니다. 부산 여행을 더욱 특별하게 만들기 위해 함께 도와드리겠습니다.<br><br>
+            감사합니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <table style="margin-left: auto; margin-right: auto;">
+      <tbody>
+        <tr>
+          <td><img src="https://blog.kakaocdn.net/dn/bVDUi3/btrpozcmjEv/MmVG7njKeJbD9AR1ItXNz1/img.png" width="80"
+              height="80"></td>
+          <td>Pusan National University<br>
+            Addr. 부산광역시 금정구 부산대학로 63번길 2<br>
+            Tel. 051-512-0311</td>
+        </tr>
+      </tbody>
+    </table>
+  </footer>
+</body>
+
+</html>
